@@ -16,7 +16,7 @@ const Sorry = mongoose.model('sorry', SorrySchema);
 
 app.use(bodyParser.json());
 
-app.post("https://backend-ru.onrender.com",async(req,res)=>{
+app.post("/",async(req,res)=>{
     const msg = req.body.msg
     await Sorry.create({
         msg:msg
